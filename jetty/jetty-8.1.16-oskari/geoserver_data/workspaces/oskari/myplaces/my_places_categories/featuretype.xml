@@ -1,0 +1,43 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--66b98ad4:14ffa9dd40d:-7fde</id>
+  <name>my_places_categories</name>
+  <nativeName>my_places_categories</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--66b98ad4:14ffa9dd40d:-7fe5</id>
+  </namespace>
+  <title>my_places_categories</title>
+  <keywords>
+    <string>my_places_categories</string>
+    <string>features</string>
+  </keywords>
+  <srs>EPSG:4326</srs>
+  <nativeBoundingBox>
+    <minx>0.0</minx>
+    <maxx>-1.0</maxx>
+    <miny>0.0</miny>
+    <maxy>-1.0</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>0.0</minx>
+    <maxx>-1.0</maxx>
+    <miny>0.0</miny>
+    <maxy>-1.0</maxy>
+    <crs>GEOGCS[&quot;WGS84(DD)&quot;, &#xd;
+  DATUM[&quot;WGS84&quot;, &#xd;
+    SPHEROID[&quot;WGS84&quot;, 6378137.0, 298.257223563]], &#xd;
+  PRIMEM[&quot;Greenwich&quot;, 0.0], &#xd;
+  UNIT[&quot;degree&quot;, 0.017453292519943295], &#xd;
+  AXIS[&quot;Geodetic longitude&quot;, EAST], &#xd;
+  AXIS[&quot;Geodetic latitude&quot;, NORTH]]</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--66b98ad4:14ffa9dd40d:-7fe3</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

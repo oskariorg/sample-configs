@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+
+<!-- =============================================================== -->
+<!-- Oskari modifications for the Jetty Server                       -->
+<!--                                                                 -->
+<!-- See start.ini file for the default configuraton files           -->
+<!-- =============================================================== -->
+
+
+<Configure id="Server" class="org.eclipse.jetty.server.Server">
+    <!-- override default form size 200k to 10M - needed by userlayer imports -->
+    <Call name="setAttribute">
+        <Arg>org.eclipse.jetty.server.Request.maxFormContentSize</Arg>
+        <Arg>10000000</Arg>
+    </Call>
+</Configure>

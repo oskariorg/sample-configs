@@ -1,0 +1,10 @@
+Known issues:
+
+- Changing database username/password is a bit of a pain. Check "Notes on configuration" in README.txt
+- Use Java 7. WFS-filters don't work correctly with Java 8 - Geotools can't parse the geojson correctly. This results in queries without filter to WFS services which makes for example highlight behavior incorrect. If this is no concern to you, no other problems with Java 8 have been discovered.
+- Printing propably needs some configuring for WMTS. WMS-layers should print out nicely. Requires more testing.
+- Reload feature needs to be done on Geoserver for myplaces before they work correctly.
+- Frontend code should be minified by default and instructions should be added how to update it (development property etc).
+- Included geoserver version uses the System property to force coordinate axis order: http://docs.geotools.org/stable/userguide/library/referencing/order.html. This might affect coordinate transformations.
+
+Note! This is a sample setup to easily get started with Oskari. You shouldn't use this package as is for production.

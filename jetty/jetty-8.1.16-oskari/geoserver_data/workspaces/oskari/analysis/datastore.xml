@@ -1,0 +1,21 @@
+<dataStore>
+  <id>DataStoreInfoImpl--66b98ad4:14ffa9dd40d:-7fdb</id>
+  <name>analysis</name>
+  <type>PostGIS</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--66b98ad4:14ffa9dd40d:-7fe4</id>
+  </workspace>
+  <connectionParameters>
+    <entry key="schema">public</entry>
+    <entry key="port">5432</entry>
+    <entry key="passwd">crypt1:bWXlnhz/iwt+r4oAshx6bw==</entry>
+    <entry key="dbtype">postgis</entry>
+    <entry key="Loose bbox">true</entry>
+    <entry key="host">localhost</entry>
+    <entry key="user">oskari</entry>
+    <entry key="database">oskaridb</entry>
+    <entry key="namespace">http://www.oskari.org</entry>
+  </connectionParameters>
+  <__default>false</__default>
+</dataStore>
