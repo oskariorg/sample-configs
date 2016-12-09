@@ -35,14 +35,7 @@ Unzip to a location on your computer. The location will be referenced as {JETTY_
 - NOTE! configure the same connection params to oskari-ext.properties, the database creation requires this dual configuration for now.
 - build the webapp by calling "mvn clean install" in the root of this repository to compile webapp-map/target/oskari-map.war file and copy it to {JETTY_HOME}/webapps/oskari-map.war
 
-##### 6) Configure JAAS for login functionality
-
-- add jetty-jaas-oskari.xml to {JETTY_HOME}/resources/
-- add oskarirealm.conf to {JETTY_HOME}/resources/
-- modify {JETTY_HOME}/start.ini and add a reference to configuration file 'resources/jetty-jaas-oskari.xml'
-- modify {JETTY_HOME}/contexts/oskari-map.xml to include a securityHandler for JAAS
-
-##### 7) Start the Jetty by running the command in {JETTY_HOME}
+##### 6) Start the Jetty by running the command in {JETTY_HOME}
 
 	java -jar start.jar
 
