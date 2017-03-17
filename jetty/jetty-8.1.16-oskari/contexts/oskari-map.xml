@@ -7,13 +7,13 @@ Configure and deploy the test web application in $(jetty.home)/webapps/test
 Note. If this file did not exist or used a context path other that /test
 then the default configuration of jetty.xml would discover the test
 webapplication with a WebAppDeployer.  By specifying a context in this
-directory, additional configuration may be specified and hot deployments 
+directory, additional configuration may be specified and hot deployments
 detected.
 ===================================================================== -->
 
 <Configure class="org.eclipse.jetty.webapp.WebAppContext">
 
-    <!-- Oskari will create a datasource based on oskari-ext.properties so this isn't needed, but will be used if configured. Configuration might be needed here if JAAS is used -->
+    <!-- Oskari will create a datasource based on oskari-ext.properties so this isn't needed, but will be used if configured. -->
     <!-- New id="OskariDS" class="org.eclipse.jetty.plus.jndi.Resource">
         <Arg></Arg>
         <Arg>jdbc/OskariPool</Arg>
@@ -53,5 +53,5 @@ detected.
         <Arg>org.eclipse.jetty.servlet.SessionPath</Arg>
         <Arg>/</Arg>
     </Call>
-    
+
 </Configure>
