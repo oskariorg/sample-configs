@@ -38,6 +38,9 @@
           <New class="org.eclipse.jetty.server.nio.SelectChannelConnector">
             <Set name="host"><Property name="jetty.host" /></Set>
             <Set name="port"><Property name="jetty.port" default="8080"/></Set>
+            <!-- Forwarded detects protocol from X-Forwarded-Proto headers etc -->
+            <!-- Uncomment if you have a nginx/apache in front of Jetty -->
+            <!-- Set name="forwarded">true</Set -->
             <Set name="maxIdleTime">300000</Set>
             <Set name="Acceptors">2</Set>
             <Set name="statsOn">false</Set>
