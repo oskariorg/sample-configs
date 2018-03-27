@@ -8,7 +8,6 @@ This package features Jetty 8.1.16 version with pre-installed items:
 - Oskari frontend code (https://github.com/nls-oskari/oskari)
 - Oskari server (map functionality: https://github.com/nls-oskari/oskari-server/tree/master/webapp-map)
 - Oskari transport (WFS services: https://github.com/nls-oskari/oskari-server/tree/master/webapp-transport)
-- Oskari printout (Print services: https://github.com/nls-oskari/oskari-server/tree/master/servlet-printout)
 - Geoserver 2.7.1.1 with WPS-plugin and Oskari extensions (https://github.com/nls-oskari/oskari-server/tree/master/geoserver-ext)
 
 Checkout the defaults and assumptions section and start jetty by running the following command in the jetty directory:
@@ -17,7 +16,7 @@ Checkout the defaults and assumptions section and start jetty by running the fol
 
 Requirements are:
 - Postgres database available (check default config below, postgis required for my places/userlayers/analysis).
-- Redis running (optional, required for WFS/printout)
+- Redis running (optional, required for WFS)
 
 ------------------------------------------------------
 Defaults/assumptions:
