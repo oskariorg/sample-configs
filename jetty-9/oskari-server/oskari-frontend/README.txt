@@ -1,0 +1,1 @@
+Clone https://github.com/oskariorg/oskari-frontend to this location
