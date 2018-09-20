@@ -1,0 +1,21 @@
+<dataStore>
+  <id>DataStoreInfoImpl-435b1267:165f6416103:-7fe1</id>
+  <name>myplaces</name>
+  <type>PostGIS</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl-435b1267:165f6416103:-7fe2</id>
+  </workspace>
+  <connectionParameters>
+    <entry key="schema">public</entry>
+    <entry key="database">oskaridb3</entry>
+    <entry key="port">5432</entry>
+    <entry key="passwd">crypt1:ch3D7/10Kc5EGuaQj5C+ig==</entry>
+    <entry key="host">localhost</entry>
+    <entry key="dbtype">postgis</entry>
+    <entry key="namespace">http://www.oskari.org</entry>
+    <entry key="Loose bbox">true</entry>
+    <entry key="user">oskari</entry>
+  </connectionParameters>
+  <__default>false</__default>
+</dataStore>

@@ -1,0 +1,37 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-435b1267:165f6416103:-7fd9</id>
+  <name>analysis_data</name>
+  <nativeName>analysis_data</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-435b1267:165f6416103:-7fe3</id>
+  </namespace>
+  <title>analysis_data</title>
+  <keywords>
+    <string>features</string>
+    <string>analysis_data</string>
+  </keywords>
+  <srs>EPSG:4326</srs>
+  <nativeBoundingBox>
+    <minx>0.0</minx>
+    <maxx>-1.0</maxx>
+    <miny>0.0</miny>
+    <maxy>-1.0</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>0.0</minx>
+    <maxx>-1.0</maxx>
+    <miny>0.0</miny>
+    <maxy>-1.0</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-435b1267:165f6416103:-7fda</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

@@ -1,0 +1,22 @@
+<dataStore>
+  <id>DataStoreInfoImpl-435b1267:165f6416103:-7fd5</id>
+  <name>userlayer</name>
+  <type>PostGIS</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl-435b1267:165f6416103:-7fe2</id>
+  </workspace>
+  <connectionParameters>
+    <entry key="schema">public</entry>
+    <entry key="database">oskaridb3</entry>
+    <entry key="port">5432</entry>
+    <entry key="passwd">crypt1:KtXba8E8rSipk78cDu6OuQ==</entry>
+    <entry key="host">localhost</entry>
+    <entry key="dbtype">postgis</entry>
+    <entry key="namespace">http://www.oskari.org</entry>
+    <entry key="Loose bbox">true</entry>
+    <entry key="Primary key metadata table">gt_pk_metadata_table</entry>
+    <entry key="user">oskari</entry>
+  </connectionParameters>
+  <__default>false</__default>
+</dataStore>
