@@ -8,7 +8,7 @@
   </workspace>
   <connectionParameters>
     <entry key="schema">public</entry>
-    <entry key="database">oskaridb3</entry>
+    <entry key="database">oskaridb</entry>
     <entry key="port">5432</entry>
     <entry key="passwd">crypt1:KtXba8E8rSipk78cDu6OuQ==</entry>
     <entry key="host">localhost</entry>
