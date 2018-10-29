@@ -45,6 +45,10 @@ Unzip to a location on your computer. The location will be referenced as {JETTY_
 Note! you can also run the command from any folder (and port) with additional parameters, but some folder references like the GeoServer data dir needs to be updated to match this configuration:
 
 	java -jar $JETTY_HOME/start.jar jetty.base=$JETTY_BASE jetty.http.port=8080
+	
+For debugging add parameters (remote debugging on port 5005):
+
+	java -Xdebug -agentlib:jdwp=transport=dt_socket,address=5005,server=y,suspend=n -jar ../jetty-distribution-9.4.12.v20180830/start.jar
 
 This creates the basic database structure (if it doesn't exist) with initial content based on a json file in content-resources modules resources. To create customized app you need to modify {JETTY_BASE}/resources/oskari-ext.properties by removing 'sample' from db.additional.modules and replace it with a flyway module name that will initialize the customized app.
 
