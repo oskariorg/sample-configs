@@ -6,7 +6,7 @@ This package was created with these steps
 
 ##### 1) Download Jetty as zip from https://www.eclipse.org/jetty/download.html (tested with 9.4.12)
 
-Unzip to a location on your computer. The location will be referenced as {JETTY_HOME}.
+Unzip to a location on your computer. The location will be referenced as {JETTY_HOME} (The folder named 'jetty-distribution-9.4.12.v20180830').
 
 ##### 2) Cleanup the demo-content:
 
@@ -25,6 +25,8 @@ Unzip to a location on your computer. The location will be referenced as {JETTY_
 - run 'git clone https://github.com/oskariorg/oskari-frontend' in {JETTY_BASE}
 - after clone you have for example a file in {JETTY_BASE}/oskari-frontend/ReleaseNotes.md
 - optionally modify 'resourceBase' in oskari-front.xml to point to a location where Oskari frontend files are located
+- run 'npm install' in the oskari-frontend folder to install build tools and libraries
+- run 'npm run build -- --env.appdef=devapp:applications/sample' in the oskari-frontend folder to create a browser compatible client
 
 ##### 5) Configuring oskari-map as root webapp
 
@@ -36,11 +38,15 @@ Unzip to a location on your computer. The location will be referenced as {JETTY_
 - build the webapp by calling "mvn clean install" in the root of the oskari-server repository to compile webapp-map/target/oskari-map.war file and copy it to {JETTY_BASE}/webapps/oskari-map.war
 - to add WFS-support copy webapp-transport/target/transport.war file to {JETTY_BASE}/webapps/transport.war
 
-##### 6) Start the Jetty by running the command in {JETTY_HOME}
+##### 6) Start the Jetty by running the command in {JETTY_BASE} (the oskari-server folder)
+
+	java -jar ../jetty-distribution-9.4.12.v20180830/start.jar
+	
+Note! you can also run the command from any folder (and port) with additional parameters, but some folder references like the GeoServer data dir needs to be updated to match this configuration:
 
 	java -jar $JETTY_HOME/start.jar jetty.base=$JETTY_BASE jetty.http.port=8080
 
-This creates the basic database structure (if it doesn't exist) with initial content based on a json file in content-resources modules resources. Overridable by having the setup file inside webapp-map.
+This creates the basic database structure (if it doesn't exist) with initial content based on a json file in content-resources modules resources. To create customized app you need to modify {JETTY_BASE}/resources/oskari-ext.properties by removing 'sample' from db.additional.modules and replace it with a flyway module name that will initialize the customized app.
 
 #### Note! 
 
