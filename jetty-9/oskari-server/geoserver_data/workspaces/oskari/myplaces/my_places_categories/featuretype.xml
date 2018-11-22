@@ -1,16 +1,16 @@
 <featureType>
-  <id>FeatureTypeInfoImpl-435b1267:165f6416103:-7fdc</id>
+  <id>FeatureTypeInfoImpl-43eed70d:1673b7d2d87:-7ff5</id>
   <name>my_places_categories</name>
   <nativeName>my_places_categories</nativeName>
   <namespace>
-    <id>NamespaceInfoImpl-435b1267:165f6416103:-7fe3</id>
+    <id>NamespaceInfoImpl-43eed70d:1673b7d2d87:-7ffc</id>
   </namespace>
   <title>my_places_categories</title>
   <keywords>
     <string>features</string>
     <string>my_places_categories</string>
   </keywords>
-  <srs>EPSG:4326</srs>
+  <srs>EPSG:3857</srs>
   <nativeBoundingBox>
     <minx>0.0</minx>
     <maxx>-1.0</maxx>
@@ -18,16 +18,16 @@
     <maxy>-1.0</maxy>
   </nativeBoundingBox>
   <latLonBoundingBox>
-    <minx>0.0</minx>
-    <maxx>-1.0</maxx>
-    <miny>0.0</miny>
-    <maxy>-1.0</maxy>
+    <minx>-8.983152841195214E-6</minx>
+    <maxx>0.0</maxx>
+    <miny>-8.983152840993819E-6</miny>
+    <maxy>0.0</maxy>
     <crs>EPSG:4326</crs>
   </latLonBoundingBox>
   <projectionPolicy>FORCE_DECLARED</projectionPolicy>
   <enabled>true</enabled>
   <store class="dataStore">
-    <id>DataStoreInfoImpl-435b1267:165f6416103:-7fe1</id>
+    <id>DataStoreInfoImpl-43eed70d:1673b7d2d87:-7ffa</id>
   </store>
   <maxFeatures>0</maxFeatures>
   <numDecimals>0</numDecimals>
