@@ -1,10 +1,10 @@
 <GeoServerTileLayer>
-  <id>LayerInfoImpl--66b98ad4:14ffa9dd40d:-7fd3</id>
+  <id>LayerInfoImpl--919598e:1677e41cb26:-7fd7</id>
   <enabled>true</enabled>
   <name>oskari:vuser_layer_data</name>
   <mimeFormats>
-    <string>image/jpeg</string>
     <string>image/png</string>
+    <string>image/jpeg</string>
   </mimeFormats>
   <gridSubsets>
     <gridSubset>

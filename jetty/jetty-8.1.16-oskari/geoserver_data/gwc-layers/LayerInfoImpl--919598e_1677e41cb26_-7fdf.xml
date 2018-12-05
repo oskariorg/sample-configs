@@ -1,10 +1,10 @@
 <GeoServerTileLayer>
-  <id>LayerInfoImpl--66b98ad4:14ffa9dd40d:-7fdf</id>
+  <id>LayerInfoImpl--919598e:1677e41cb26:-7fdf</id>
   <enabled>true</enabled>
   <name>oskari:my_places</name>
   <mimeFormats>
-    <string>image/jpeg</string>
     <string>image/png</string>
+    <string>image/jpeg</string>
   </mimeFormats>
   <gridSubsets>
     <gridSubset>
