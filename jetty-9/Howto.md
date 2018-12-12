@@ -26,7 +26,7 @@ Unzip to a location on your computer. The location will be referenced as {JETTY_
 - after clone you have for example a file in {JETTY_BASE}/oskari-frontend/ReleaseNotes.md
 - optionally modify 'resourceBase' in oskari-front.xml to point to a location where Oskari frontend files are located
 - run 'npm install' in the oskari-frontend folder to install build tools and libraries
-- run 'npm run build -- --env.appdef=devapp:applications/sample' in the oskari-frontend folder to create a browser compatible client
+- run 'npm run build' in the oskari-frontend folder to create a browser compatible client
 
 ##### 5) Configuring oskari-map as root webapp
 
