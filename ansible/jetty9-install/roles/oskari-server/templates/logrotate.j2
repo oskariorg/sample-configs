@@ -1,0 +1,10 @@
+{{ oskari_log_dir }}/{{ oskari_component }}/*log {
+    copytruncate
+    daily
+    dateext
+    rotate 90
+    compress
+    missingok
+    su jetty jetty
+    create 0644 jetty jetty
+}

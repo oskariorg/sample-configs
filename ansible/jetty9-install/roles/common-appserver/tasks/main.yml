@@ -1,0 +1,15 @@
+---
+# Defensive checking of server OS
+- debug:
+    msg: "System OS family '{{ ansible_facts['os_family'] }}' version '{{ ansible_facts['distribution_major_version'] }}'"
+
+- name: after version 2.7 both 'msg' and 'fail_msg' can customize failing assertion message
+  assert:
+    that:
+      - "'{{ ansible_facts['os_family'] }}' == 'RedHat' or '{{ ansible_facts['os_family'] }}' == 'CentOS'"
+      - "{{ ansible_facts['distribution_major_version'] }} == 6 or {{ ansible_facts['distribution_major_version'] }} == 7"
+    fail_msg: "Only tested with CentOS 6, RedHat 6 and 7"
+    success_msg: "OS is supported"
+
+- include_tasks: install-utils.yml
+- include_tasks: create-users.yml

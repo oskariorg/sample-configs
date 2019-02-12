@@ -1,0 +1,29 @@
+#!/bin/bash
+#
+# Inspired by https://github.com/kylemanna/systemd-utils/blob/master/onfailure/onfailure.sh
+#
+# Simple systemd script used to be called via something like:
+#
+# Example Unit section of a service file:
+#
+# [Unit]
+# ...
+# Onfailure=oskari-error-notify@%i.service
+#
+#
+# sudo nano /etc/systemd/system/oskari-error-notify@.service
+# oskari-error-notify@.service:
+#
+# [Unit]
+# Description=OnFailure for %i
+#
+# [Service]
+# Type=oneshot
+# ExecStart={{ oskari_dir }}/error-notify.sh %i
+
+SERVICE=${1:-unknown}
+SLACK_CHANNEL=#{{ slack_channel }}
+SLACK_COLOR=#F35A00
+EXTRA_MSG="Restarting in 30 seconds..."
+# Post about completion to slack.com since plugin cant send message
+curl --data "{ \"channel\" : \"$SLACK_CHANNEL\", \"attachments\": [{\"fallback\": \"Service warning!\",\"color\": \"$SLACK_COLOR\",\"pretext\": \"Service just triggered a failure state! $EXTRA_MSG\",\"fields\": [{\"title\": \"Server\",\"value\": \"$HOSTNAME\",\"short\": true},{\"title\": \"Component\",\"value\": \"$SERVICE\",\"short\": true}]}] }" {% if use_proxy %}--proxy 'http://{{ server_proxy }}:{{ server_proxy_port }}'{% endif %} '{{ slack_api_url }}'

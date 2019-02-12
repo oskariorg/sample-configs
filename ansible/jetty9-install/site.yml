@@ -1,0 +1,11 @@
+---
+# This playbook deploys a simple standalone Oskari server.
+
+- hosts: appservers
+  remote_user: oskari
+  become: yes
+  become_method: sudo
+
+  roles:
+    - common-appserver
+    - oskari-server

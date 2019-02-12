@@ -1,0 +1,10 @@
+[appservers]
+myprodserver
+
+[dbservers]
+mydbserver
+
+[appservers:vars]
+service_fqdn=http://mysite.org
+# use myuser to connect instead of oskari
+ansible_user=myuser

@@ -1,0 +1,40 @@
+# java -jar $JETTY_HOME/start.jar jetty.base=$JETTY_BASE jetty.http.port=[port]
+JETTY_HOME={{ jetty_home }}
+
+JETTY_OPTS=jetty.base={{ oskari_dir }}/{{ oskari_component }} jetty.http.port={{ server_port }}
+
+{% if use_single_jetty or oskari_component == 'oskari-geoserver' %}
+COMP_OPTS=-DGEOSERVER_DATA_DIR={{ geoserver_data_dir }}
+{% else %}
+COMP_OPTS=
+{% endif %}
+
+# Server is by default running in 64-bit mode
+# - custom tmp directory as the defaults might be cleaned by the OS
+# - Use the new and improved G1 garbage collector
+# - Save memory by unloading one-off classes such as Flyway scripts
+# - systemd script to restart on crash
+JAVA_OPTS=-server -Djetty.logs={{ oskari_log_dir }}/{{ oskari_component }} -Djava.io.tmpdir={{ oskari_tmp_dir }}/{{ oskari_component }} -Doskari.syslog.level=warn -XX:+UseG1GC -XX:+CMSClassUnloadingEnabled  -XX:+CrashOnOutOfMemoryError
+
+{% if use_proxy %}
+# Proxy config
+PROXY=-Dhttp.proxyHost={{ server_proxy }} -Dhttp.proxyPort={{ server_proxy_port }} -Dhttp.nonProxyHosts={{ server_proxy_non_proxy_hosts }} -Dhttps.proxyHost={{ server_proxy }} -Dhttps.proxyPort={{ server_proxy_port }} -Dhttps.nonProxyHosts={{ server_proxy_non_proxy_hosts }}
+{% endif %}
+
+# Memory settings
+# By default Metaspace in Java VM 8 is not limited, though for the sake of system stability it makes sense to limit it with some finite value.
+MEMORY=-Xms512m -Xmx3192m -XX:MaxMetaspaceSize=4g
+
+# https://docs.oracle.com/cd/E19900-01/819-4742/abeik/index.html
+#-XX:SurvivorRatio=
+
+# Instructs garbage collector to collect young generation before doing Full GC or CMS remark phase
+# and as a result improve their performance due to absence of need to check references between young generation and tenured.
+#JAVA_OPTIONS="-XX:+ScavengeBeforeFullGC -XX:+CMSScavengeBeforeRemark"
+
+# GC Logging
+GC_LOG=-XX:+PrintGCDateStamps -verbose:gc -XX:+PrintGCDetails -Xloggc:{{ oskari_log_dir }}/{{ oskari_component }}/gc.log
+
+# Dump on Out of Memory
+OOM_LOG=-XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath={{ oskari_log_dir }}/{{ oskari_component }}/heap_`date`.hprof
+

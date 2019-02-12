@@ -1,0 +1,13 @@
+oskari_dir: /opt/oskari
+# deploy transport and GeoServer to same Jetty as oskari-server
+use_single_jetty: True
+oskari_log_dir: /var/log/oskari
+oskari_tmp_dir: /tmp/oskari
+
+server_proxy: myproxy.com
+server_proxy_port: 8001
+# formatted for sysconfig
+server_proxy_non_proxy_hosts: 'localhost|*.mysite.org'
+
+# The server can't connect to oskari.org, load the zip file on the ansible host and scp it to server
+use_local_download: True

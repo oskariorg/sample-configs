@@ -1,0 +1,44 @@
+
+- name: copy oskari-server as oskari-geoserver
+  command: cp -r {{ oskari_dir }}/oskari-server {{ oskari_dir }}/oskari-geoserver
+  args:
+    creates: "{{ oskari_dir }}/oskari-geoserver"
+
+- name: Set file permissions
+  file:
+    path: "{{ oskari_dir }}/oskari-geoserver"
+    owner: jetty
+    group: oskari
+    mode: 0775
+    recurse: yes
+
+- name: Remove extra files from geoserver
+  file:
+    path: "{{ oskari_dir }}/oskari-geoserver/{{ item }}"
+    state: absent
+  with_items:
+    - resources/articlesByTag
+    - resources/oskari-ext.properties
+    - resources/transport-ext.properties
+    - resources/log4j.properties
+    - setup.war
+    - oskari-frontend
+    - webapps/oskari-front.xml
+    - webapps/oskari-map.xml
+    - webapps/oskari-map.war
+    - webapps/transport.war
+    - webapps/READNE.TXT
+
+# RHEL/Centos 6
+- include_tasks: setup-service-initd.yml
+  when: not is_systemd
+  vars:
+    oskari_component: oskari-geoserver
+    server_port: "{{ oskari_geoserver_port }}"
+
+# RHEL/Centos 7+
+- include_tasks: setup-service-systemd.yml
+  when: is_systemd
+  vars:
+    oskari_component: oskari-geoserver
+    server_port: "{{ oskari_geoserver_port }}"

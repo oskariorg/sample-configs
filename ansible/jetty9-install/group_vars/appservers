@@ -1,0 +1,49 @@
+# server directory for install
+oskari_dir: /data/oskari
+
+# transport and geoserver will have +1 or +2 as ports by default
+oskari_server_port: 7701
+
+use_single_jetty: False
+install_transport: True
+install_geoserver: True
+
+###########################
+## Error notifications   ##
+###########################
+# uncomment if Slack should be used as error notifier service
+#slack_api_url:https://[your domain].slack.com/services/hooks/jenkins-ci?token=[your token]
+#slack_channel: mychannel
+###########################
+
+# False uses /etc/init.d scripts (RHEL/CentOS 6) and True uses systemctl services (RHEL/CentOS 7+)
+is_systemd: "{{ ansible_facts['distribution_major_version'] }} == 7"
+
+# uncomment if proxy is required
+#server_proxy: myproxy.org
+#server_proxy_port: 8001
+#server_proxy_non_proxy_hosts: localhost|*.mysite.org
+
+##############################################################
+## !!DONT TOUCH THESE if you don't know what you're doing!! ##
+##############################################################
+# Convenience variable for detecting need for proxy config
+use_proxy: "{{ True if server_proxy is defined and server_proxy|length else False }}"
+use_error_notifier: "{{ True if slack_api_url is defined and slack_api_url|length else False }}"
+
+# If server can't access zip file -> set to true and the control server downloads file and syncs it to server
+use_local_download: False
+
+# Use OpenJDK devel version since we need JSP compile
+java_cmd: /etc/alternatives/java_sdk_openjdk/bin/java
+
+# Jetty dirs
+jetty_home: "{{ oskari_dir }}/jetty-distribution-9.4.12.v20180830"
+oskari_log_dir: "{{ oskari_dir }}/log"
+oskari_tmp_dir: "{{ oskari_dir }}/tmp"
+geoserver_data_dir: "{{ oskari_dir }}/oskari-{% if use_single_jetty %}server{% else %}geoserver{% endif %}/geoserver_data"
+
+# Jetty ports
+oskari_transport_port: "{{ oskari_server_port if use_single_jetty else oskari_server_port + 1 }}"
+oskari_geoserver_port: "{{ oskari_server_port if use_single_jetty else oskari_server_port + 2 }}"
+##############################################################

@@ -1,0 +1,30 @@
+# Assumes to get "oskari_component" as parameter
+- name: Creates log directory for {{ oskari_component }}
+  file:
+    path: "{{ oskari_log_dir }}/{{ oskari_component }}"
+    state: directory
+    owner: jetty
+    group: oskari
+    mode: 0775
+    recurse: yes
+
+- name: Configure Log4J for {{ oskari_component }}
+  template:
+    src: log4j.properties.j2
+    dest: "{{ oskari_dir }}/{{ oskari_component }}/resources/log4j.properties"
+    owner: jetty
+    group: oskari
+
+- name: Setup stderr to logfile for {{ oskari_component }}
+  template:
+    src: jetty-logging.ini.j2
+    dest: "{{ oskari_dir }}/{{ oskari_component }}/start.d/console-capture.ini"
+    owner: jetty
+    group: oskari
+
+- name: Configure Logrotate.d for {{ oskari_component }}
+  template:
+    src: logrotate.j2
+    dest: "/etc/logrotate.d/{{ oskari_component }}"
+#    owner: jetty
+#    group: oskari

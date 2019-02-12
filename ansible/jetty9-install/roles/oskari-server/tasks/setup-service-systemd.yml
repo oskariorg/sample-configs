@@ -1,0 +1,31 @@
+
+# Creates:
+# - tmp directory
+# - /etc/sysconfig/oskari-server
+# - /etc/systemd/system/oskari-server.service
+
+# Create tmp dir that is referenced in service script
+- include_tasks: setup-tmp-dir.yml
+
+- name: Setup sysconfig for service {{ oskari_component }}
+  template:
+    src: oskari-sysconfig.j2
+    dest: "/etc/sysconfig/{{ oskari_component }}"
+    owner: jetty
+    group: oskari
+
+- name: Setup script for service {{ oskari_component }}
+  template:
+    src: oskari-systemd.j2
+    dest: "/etc/systemd/system/{{ oskari_component }}.service"
+    owner: jetty
+    group: oskari
+
+#sudo systemctl enable oskari-server
+- name: Enable service for automatic start
+  service:
+    name: "{{ oskari_component }}"
+    enabled: yes
+
+# Do we want to start it?
+#sudo systemctl start oskari-server
