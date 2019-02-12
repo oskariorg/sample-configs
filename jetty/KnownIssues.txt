@@ -1,8 +1,0 @@
-Known issues:
-
-- Changing database username/password is a bit of a pain. Check "Notes on configuration" in README.txt
-- Reload feature needs to be done on Geoserver for myplaces before they work correctly.
-- Frontend code should be minified by default and instructions should be added how to update it (development property etc).
-- Included geoserver version uses the System property to force coordinate axis order: http://docs.geotools.org/stable/userguide/library/referencing/order.html. This might affect coordinate transformations.
-
-Note! This is a sample setup to easily get started with Oskari. You shouldn't use this package as is for production.
