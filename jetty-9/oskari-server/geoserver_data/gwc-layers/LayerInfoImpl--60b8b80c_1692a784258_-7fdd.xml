@@ -1,8 +1,8 @@
 <GeoServerTileLayer>
-  <id>LayerInfoImpl-43eed70d:1673b7d2d87:-7ff0</id>
+  <id>LayerInfoImpl--60b8b80c:1692a784258:-7fdd</id>
   <enabled>true</enabled>
   <inMemoryCached>true</inMemoryCached>
-  <name>oskari:vuser_layer_data</name>
+  <name>oskari:my_places</name>
   <mimeFormats>
     <string>image/png</string>
     <string>image/jpeg</string>

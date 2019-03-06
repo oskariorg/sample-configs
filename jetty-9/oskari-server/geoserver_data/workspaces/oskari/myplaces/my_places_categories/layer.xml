@@ -1,12 +1,17 @@
 <layer>
   <name>my_places_categories</name>
-  <id>LayerInfoImpl-43eed70d:1673b7d2d87:-7ff4</id>
+  <id>LayerInfoImpl--60b8b80c:1692a784258:-7fdb</id>
   <type>VECTOR</type>
   <defaultStyle>
-    <id>StyleInfoImpl--50e83886:1673b7a3d66:-7ffc</id>
+    <id>StyleInfoImpl--60b8b80c:1692a784258:-7fda</id>
   </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--60b8b80c:1692a784258:-7fda</id>
+    </style>
+  </styles>
   <resource class="featureType">
-    <id>FeatureTypeInfoImpl-43eed70d:1673b7d2d87:-7ff5</id>
+    <id>FeatureTypeInfoImpl--60b8b80c:1692a784258:-7fdc</id>
   </resource>
   <queryable>true</queryable>
   <opaque>false</opaque>

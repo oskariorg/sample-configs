@@ -1,12 +1,12 @@
 <layer>
   <name>vuser_layer_data</name>
-  <id>LayerInfoImpl-43eed70d:1673b7d2d87:-7ff0</id>
+  <id>LayerInfoImpl--60b8b80c:1692a784258:-7fd7</id>
   <type>VECTOR</type>
   <defaultStyle>
-    <id>StyleInfoImpl--50e83886:1673b7a3d66:-7ffc</id>
+    <id>StyleInfoImpl--60b8b80c:1692a784258:-7ffc</id>
   </defaultStyle>
   <resource class="featureType">
-    <id>FeatureTypeInfoImpl-43eed70d:1673b7d2d87:-7ff1</id>
+    <id>FeatureTypeInfoImpl--60b8b80c:1692a784258:-7fd8</id>
   </resource>
   <attribution>
     <logoWidth>0</logoWidth>
