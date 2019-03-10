@@ -33,6 +33,7 @@ use_error_notifier: "{{ True if slack_api_url is defined and slack_api_url|lengt
 
 # If server can't access zip file -> set to true and the control server downloads file and syncs it to server
 use_local_download: False
+assume_utils_installed: False
 
 # Use OpenJDK devel version since we need JSP compile
 java_cmd: /etc/alternatives/java_sdk_openjdk/bin/java

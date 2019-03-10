@@ -12,4 +12,5 @@
     success_msg: "OS is supported"
 
 - include_tasks: install-utils.yml
+  when: not assume_utils_installed
 - include_tasks: create-users.yml
