@@ -10,8 +10,8 @@
 
 - name: Configure Log4J for {{ oskari_component }}
   template:
-    src: log4j.properties.j2
-    dest: "{{ oskari_dir }}/{{ oskari_component }}/resources/log4j.properties"
+    src: log4j2.xml.j2
+    dest: "{{ oskari_dir }}/{{ oskari_component }}/resources/log4j2.xml"
     owner: jetty
     group: oskari
 

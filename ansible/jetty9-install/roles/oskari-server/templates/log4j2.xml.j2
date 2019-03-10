@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="error" strict="false" name="OskariLogConfig">
+  <Properties>
+    <Property name="LOG_DIR">{{ oskari_log_dir }}/{{ oskari_component }}</Property>
+  </Properties>
+  <Appenders>
+    <RollingFile name="File"
+        fileName="${LOG_DIR}/oskari.log"
+        filePattern="${LOG_DIR}/oskari-%i.log.gz">
+        <PatternLayout pattern="%d %-5p %c - %m%n" />
+      <Policies>
+        <OnStartupTriggeringPolicy />
+        <SizeBasedTriggeringPolicy size="100MB" />
+      </Policies>
+      <DefaultRolloverStrategy max="10" />
+    </RollingFile>
+    <Console name="STDOUT">
+        <PatternLayout pattern="%d %-5p %c - %m%n" />
+        <ThresholdFilter level="warn"/>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Logger name="org.apache" level="warn">
+      <AppenderRef ref="File"/>
+    </Logger>
+    <Logger name="com.ibatis" level="warn">
+      <AppenderRef ref="File"/>
+    </Logger>
+    <Logger name="org.cometd" level="warn">
+      <AppenderRef ref="File"/>
+    </Logger>
+    <Logger name="org.quartz" level="warn">
+      <AppenderRef ref="File"/>
+    </Logger>
+    <Root level="info">
+      <AppenderRef ref="File"/>
+      <AppenderRef ref="STDOUT" />
+    </Root>
+  </Loggers>
+</Configuration>
