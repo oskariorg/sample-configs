@@ -17,7 +17,7 @@ install_geoserver: True
 ###########################
 
 # False uses /etc/init.d scripts (RHEL/CentOS 6) and True uses systemctl services (RHEL/CentOS 7+)
-is_systemd: "{{ ansible_facts['distribution_major_version'] }} == 7"
+is_systemd: "{{ ansible_facts['distribution_major_version'] == 7 }}"
 
 # uncomment if proxy is required
 #server_proxy: myproxy.org
