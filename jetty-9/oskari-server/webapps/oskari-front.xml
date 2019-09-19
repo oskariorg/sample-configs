@@ -10,7 +10,7 @@ to serve static html files and images.
 
 <Configure class="org.eclipse.jetty.server.handler.ContextHandler">
   <Set name="contextPath">/Oskari</Set>
-  <Set name="resourceBase"><SystemProperty name="jetty.base" default="."/>/oskari-frontend</Set>
+  <Set name="resourceBase"><SystemProperty name="jetty.base" default="."/>/sample-application</Set>
   <Set name="handler">
     <New class="org.eclipse.jetty.server.handler.ResourceHandler">
       <Set name="welcomeFiles">

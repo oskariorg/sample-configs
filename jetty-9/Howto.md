@@ -19,11 +19,11 @@ Unzip to a location on your computer. The location will be referenced as {JETTY_
 - Download the driver .jar-file from https://jdbc.postgresql.org/download.html (tested with JDBC 4.2 Postgresql Driver, Version 42.2.5)
 - Place the driver in {JETTY_BASE}/lib/ext/postgresql-42.2.5.jar
 
-##### 4) Add configuration to serve Oskari frontend files
+##### 4) Add configuration to serve Oskari application frontend files
 
 - add oskari-front.xml to {JETTY_BASE}/webapps/
-- run 'git clone https://github.com/oskariorg/oskari-frontend' in {JETTY_BASE}
-- after clone you have for example a file in {JETTY_BASE}/oskari-frontend/ReleaseNotes.md
+- run 'git clone https://github.com/oskariorg/sample-application' in {JETTY_BASE}
+- after clone you have for example a file in {JETTY_BASE}/sample-application/README.md
 - optionally modify 'resourceBase' in oskari-front.xml to point to a location where Oskari frontend files are located
 - run 'npm install' in the oskari-frontend folder to install build tools and libraries
 - run 'npm run build' in the oskari-frontend folder to create a browser compatible client
@@ -54,7 +54,7 @@ This creates the basic database structure (if it doesn't exist) with initial con
 
 #### Note! 
 
-Running the transport webapp also requires Redis to be installed in addition to PostgreSQL/PostGIS.
+Some features like the statistical maps also requires Redis to be installed in addition to PostgreSQL/PostGIS.
 
 ##### 1) Download Redis from http://redis.io/download
 
@@ -62,11 +62,4 @@ Running the transport webapp also requires Redis to be installed in addition to 
 
 Configuration instructions for non-default settings TBD.
 
-##### 3) Configure webapp-map location for transport (optional)
-
-- add transport-ext.properties to {JETTY_BASE}/resources/
-- edit oskari.domain property in transport-ext.properties if you are not running in port 8080
-
-	oskari.domain=http://localhost:8080
-
-##### 4) Restart Jetty.
+##### 3) Restart Jetty.
