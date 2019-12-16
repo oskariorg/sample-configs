@@ -22,8 +22,14 @@
 # ExecStart={{ oskari_dir }}/error-notify.sh %i
 
 SERVICE=${1:-unknown}
-SLACK_CHANNEL=#{{ slack_channel }}
-SLACK_COLOR=#F35A00
+CHAT_COLOR=#F35A00
 EXTRA_MSG="Restarting in 30 seconds..."
-# Post about completion to slack.com since plugin cant send message
-curl --data "{ \"channel\" : \"$SLACK_CHANNEL\", \"attachments\": [{\"fallback\": \"Service warning!\",\"color\": \"$SLACK_COLOR\",\"pretext\": \"Service just triggered a failure state! $EXTRA_MSG\",\"fields\": [{\"title\": \"Server\",\"value\": \"$HOSTNAME\",\"short\": true},{\"title\": \"Component\",\"value\": \"$SERVICE\",\"short\": true}]}] }" {% if use_proxy %}--proxy 'http://{{ server_proxy }}:{{ server_proxy_port }}'{% endif %} '{{ slack_api_url }}'
+
+{% if slack_api_url %}
+# Post to slack.com
+curl --data "{ \"channel\" : \"#{{ slack_channel }}\", \"attachments\": [{\"fallback\": \"Service warning!\",\"color\": \"$CHAT_COLOR\",\"pretext\": \"Service just triggered a failure state! $EXTRA_MSG\",\"fields\": [{\"title\": \"Server\",\"value\": \"$HOSTNAME\",\"short\": true},{\"title\": \"Component\",\"value\": \"$SERVICE\",\"short\": true}]}] }" {% if use_proxy %}--proxy 'http://{{ server_proxy }}:{{ server_proxy_port }}'{% endif %} '{{ slack_api_url }}'
+{% endif %}
+{% if rocketchat_api_url %}
+# Post to rocketchat
+curl -X POST -H 'Content-Type: application/json' --data "{ \"username\": \"Jenkins\", \"text\": \"Service warning!\", \"attachments\": [{\"title\": \"Service down!\",\"text\": \"Service just triggered a failure state! $EXTRA_MSG\",\"color\": \"$CHAT_COLOR\",\"fields\": [{\"title\": \"Server\",\"value\": \"$HOSTNAME\",\"short\": true},{\"title\": \"Component\",\"value\": \"$SERVICE\",\"short\": true}]}]}" '{{ rocketchat_api_url }}'
+{% endif %}

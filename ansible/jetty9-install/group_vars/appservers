@@ -13,6 +13,9 @@ install_geoserver: True
 # uncomment if Slack should be used as error notifier service
 #slack_api_url:https://[your domain].slack.com/services/hooks/jenkins-ci?token=[your token]
 #slack_channel: mychannel
+
+# uncomment if Rocket chat should be used as error notifier service
+rocketchat_api_url: https://rocketchat.[your domain].fi/hooks/[your token]
 ###########################
 
 # False uses /etc/init.d scripts (RHEL/CentOS 6) and True uses systemctl services (RHEL/CentOS 7+)
