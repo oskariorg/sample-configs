@@ -1,11 +1,10 @@
 # server directory for install
 oskari_dir: /data/oskari
 
-# transport and geoserver will have +1 or +2 as ports by default
+# geoserver will have +2 (7703) as port by default
 oskari_server_port: 7701
 
 use_single_jetty: False
-install_transport: True
 install_geoserver: True
 
 ###########################
@@ -45,6 +44,5 @@ oskari_tmp_dir: "{{ oskari_dir }}/tmp"
 geoserver_data_dir: "{{ oskari_dir }}/oskari-{% if use_single_jetty %}server{% else %}geoserver{% endif %}/geoserver_data"
 
 # Jetty ports
-oskari_transport_port: "{{ oskari_server_port if use_single_jetty else oskari_server_port + 1 }}"
 oskari_geoserver_port: "{{ oskari_server_port if use_single_jetty else oskari_server_port + 2 }}"
 ##############################################################

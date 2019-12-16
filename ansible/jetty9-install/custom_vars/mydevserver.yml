@@ -1,5 +1,5 @@
 oskari_dir: /opt/oskari
-# deploy transport and GeoServer to same Jetty as oskari-server
+# deploy GeoServer to same Jetty as oskari-server
 use_single_jetty: True
 oskari_log_dir: /var/log/oskari
 oskari_tmp_dir: /tmp/oskari

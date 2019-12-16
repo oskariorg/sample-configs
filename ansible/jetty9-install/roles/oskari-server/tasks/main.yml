@@ -22,15 +22,6 @@
   vars:
     oskari_component: oskari-geoserver
 
-# Separate transport Jetty if configured
-- include_tasks: create-transport.yml
-  when: install_transport and not use_single_jetty
-
-- include_tasks: setup-logging.yml
-  when: install_transport and not use_single_jetty
-  vars:
-    oskari_component: oskari-transport
-
 # Main server
 - include_tasks: create-server.yml
 - include_tasks: setup-logging.yml

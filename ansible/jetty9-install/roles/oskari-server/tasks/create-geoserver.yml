@@ -19,14 +19,12 @@
   with_items:
     - resources/articlesByTag
     - resources/oskari-ext.properties
-    - resources/transport-ext.properties
     - resources/log4j.properties
     - setup.war
-    - oskari-frontend
+    - sample-application
     - webapps/oskari-front.xml
     - webapps/oskari-map.xml
     - webapps/oskari-map.war
-    - webapps/transport.war
     - webapps/READNE.TXT
 
 # RHEL/Centos 6

@@ -13,15 +13,6 @@
 # Should we remove oskari-map as well as it should be created for the app? Or start the app with it
 # Do something with setup.war?
 
-- name: Remove transport files from oskari-server
-  when: not install_transport or not use_single_jetty
-  file:
-    path: "{{ oskari_dir }}/oskari-server/{{ item }}"
-    state: absent
-  with_items:
-    - resources/transport-ext.properties
-    - webapps/transport.war
-
 - name: Remove GeoServer files from oskari-server
   when: not install_geoserver or not use_single_jetty
   file:
