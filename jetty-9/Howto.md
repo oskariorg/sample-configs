@@ -4,20 +4,20 @@ This package was created with these steps
 
 ## Basic map functionality
 
-##### 1) Download Jetty as zip from https://www.eclipse.org/jetty/download.html (tested with 9.4.12)
+##### 1) Download Jetty as zip from https://www.eclipse.org/jetty/download.html (tested with 9.4.31)
 
-Unzip to a location on your computer. The location will be referenced as {JETTY_HOME} (The folder named 'jetty-distribution-9.4.12.v20180830').
+Unzip to a location on your computer. The location will be referenced as {JETTY_HOME} (The folder named 'jetty-distribution-9.4.31.v20200723').
 
 ##### 2) Cleanup the demo-content:
 
 - Move ./{JETTY_HOME}/demo-base/ to ./oskari-server/ (oskari-server will be called {JETTY_BASE} from now on)
 - Remove everything from etc, lib/ext, resources and webapps
-- Remove start.d/demo.ini and start.d/https.ini
+- Remove start.d/demo.ini, start.d/https.ini, start.d/websocket.ini
 
 ##### 3) Adding the PostgreSQL driver
 
-- Download the driver .jar-file from https://jdbc.postgresql.org/download.html (tested with JDBC 4.2 Postgresql Driver, Version 42.2.5)
-- Place the driver in {JETTY_BASE}/lib/ext/postgresql-42.2.5.jar
+- Download the driver .jar-file from https://jdbc.postgresql.org/download.html (tested with JDBC 4.2 Postgresql Driver, Version 42.2.14)
+- Place the driver in {JETTY_BASE}/lib/ext/postgresql-42.2.14.jar
 
 ##### 4) Add configuration to serve Oskari application frontend files
 
@@ -36,11 +36,10 @@ Unzip to a location on your computer. The location will be referenced as {JETTY_
 - edit oskari.domain property in oskari-ext.properties if you are not running in port 8080
 - run 'git clone https://github.com/oskariorg/oskari-server' on your computer to get the latest code for oskari-server
 - build the webapp by calling "mvn clean install" in the root of the oskari-server repository to compile webapp-map/target/oskari-map.war file and copy it to {JETTY_BASE}/webapps/oskari-map.war
-- to add WFS-support copy webapp-transport/target/transport.war file to {JETTY_BASE}/webapps/transport.war
 
 ##### 6) Start the Jetty by running the command in {JETTY_BASE} (the oskari-server folder)
 
-	java -jar ../jetty-distribution-9.4.12.v20180830/start.jar
+	java -jar ../jetty-distribution-9.4.31.v20200723/start.jar
 	
 Note! you can also run the command from any folder (and port) with additional parameters, but some folder references like the GeoServer data dir needs to be updated to match this configuration:
 
@@ -48,7 +47,7 @@ Note! you can also run the command from any folder (and port) with additional pa
 	
 For debugging add parameters (remote debugging on port 5005):
 
-	java -Xdebug -agentlib:jdwp=transport=dt_socket,address=5005,server=y,suspend=n -jar ../jetty-distribution-9.4.12.v20180830/start.jar
+	java -Xdebug -agentlib:jdwp=transport=dt_socket,address=5005,server=y,suspend=n -jar ../jetty-distribution-9.4.31.v20200723/start.jar
 
 This creates the basic database structure (if it doesn't exist) with initial content based on a json file in content-resources modules resources. To create customized app you need to modify {JETTY_BASE}/resources/oskari-ext.properties by removing 'sample' from db.additional.modules and replace it with a flyway module name that will initialize the customized app.
 
@@ -60,6 +59,6 @@ Some features like the statistical maps also requires Redis to be installed in a
 
 ##### 2) Start redis-server with default config (localhost:6379)
 
-Configuration instructions for non-default settings TBD.
+For non-default settings you should modify redis-configuration in oskari-ext.propreties file under {JETTY_BASE}/resouces/
 
 ##### 3) Restart Jetty.
