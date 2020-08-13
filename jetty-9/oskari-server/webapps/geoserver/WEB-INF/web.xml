@@ -116,6 +116,14 @@
          <param-value>false</param-value>
      </init-param>
      <init-param>
+         <!-- The 'log-request-headers' parameter is a boolean value, "true" (case-insensitive) for
+              true or any other value for false.  If enabled, then the logging will include the HTTP 
+              headers of requests.  If not specified, this parameter defaults to false.
+              -->
+         <param-name>log-request-headers</param-name>
+         <param-value>false</param-value>
+     </init-param>  
+     <init-param>
      <!-- The 'log-request-bodies' parameter is a boolean value, "true" (case-insensitive) for
           true or any other value for false.  If enabled, then the logging will include the body
           of POST and PUT requests.  If not specified, this parameter defaults to false.
@@ -158,11 +166,29 @@
      reasons 
      -->
    </filter>
-   <!-- Uncomment following filter to enable CORS -->
-   <!-- <filter>
+
+   <!-- Uncomment following filter to enable CORS
+   <filter>
         <filter-name>cross-origin</filter-name>
         <filter-class>org.eclipse.jetty.servlets.CrossOriginFilter</filter-class>
-    </filter> -->
+       <init-param>
+           <param-name>chainPreflight</param-name>
+           <param-value>false</param-value>
+       </init-param>
+       <init-param>
+           <param-name>allowedOrigins</param-name>
+           <param-value>*</param-value>
+       </init-param>
+       <init-param>
+           <param-name>allowedMethods</param-name>
+           <param-value>GET,POST,PUT,DELETE,HEAD,OPTIONS</param-value>
+       </init-param>
+       <init-param>
+           <param-name>allowedHeaders</param-name>
+           <param-value>*</param-value>
+       </init-param>
+    </filter>
+    -->
 
     <!-- 
       THIS FILTER MUST BE THE FIRST ONE, otherwise we end up with ruined chars in the input from the GUI
@@ -174,11 +200,12 @@
       <url-pattern>/*</url-pattern>
     </filter-mapping>
    
-   <!-- Uncomment following filter to enable CORS -->
-    <!-- <filter-mapping>
+   <!-- Uncomment following filter to enable CORS
+    <filter-mapping>
         <filter-name>cross-origin</filter-name>
         <url-pattern>/*</url-pattern>
-    </filter-mapping> -->
+    </filter-mapping>
+    -->
    
     <filter-mapping>
       <filter-name>FlushSafeFilter</filter-name>
