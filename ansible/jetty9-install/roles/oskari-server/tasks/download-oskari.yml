@@ -11,25 +11,25 @@
 - name: Download Oskari package on server
   when: not use_local_download
   get_url:
-    url=http://oskari.org/build/server/jetty-9.4.12-oskari.zip
-    dest="{{ oskari_dir }}/jetty-9.4.12-oskari.zip"
+    url=http://oskari.org/build/server/oskari-latest-stable.zip
+    dest="{{ oskari_dir }}/oskari-latest-stable.zip"
 
 - name: Download Oskari package locally
   when: use_local_download
   get_url:
-    url=http://oskari.org/build/server/jetty-9.4.12-oskari.zip
-    dest="/tmp/jetty-9.4.12-oskari.zip"
+    url=http://oskari.org/build/server/oskari-latest-stable.zip
+    dest="/tmp/oskari-latest-stable.zip"
   delegate_to: 127.0.0.1
 
 - name: Copy zip from the control machine to remote host
   when: use_local_download
   synchronize:
-    src: /tmp/jetty-9.4.12-oskari.zip
-    dest: "{{ oskari_dir }}/jetty-9.4.12-oskari.zip"
+    src: /tmp/oskari-latest-stable.zip
+    dest: "{{ oskari_dir }}/oskari-latest-stable.zip"
 
 - name: Extract archive
   unarchive:
-    src: "{{ oskari_dir }}/jetty-9.4.12-oskari.zip"
+    src: "{{ oskari_dir }}/oskari-latest-stable.zip"
     dest: "{{ oskari_dir }}"
     remote_src: yes
     owner: jetty
