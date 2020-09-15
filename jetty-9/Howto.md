@@ -16,8 +16,8 @@ Unzip to a location on your computer. The location will be referenced as {JETTY_
 
 ##### 3) Adding the PostgreSQL driver
 
-- Download the driver .jar-file from https://jdbc.postgresql.org/download.html (tested with JDBC 4.2 Postgresql Driver, Version 42.2.14)
-- Place the driver in {JETTY_BASE}/lib/ext/postgresql-42.2.14.jar
+- Download the driver .jar-file from https://jdbc.postgresql.org/download.html (tested with JDBC 4.2 Postgresql Driver, Version 42.2.16)
+- Place the driver in {JETTY_BASE}/lib/ext/postgresql-42.2.16.jar
 
 ##### 4) Add configuration to serve Oskari application frontend files
 
