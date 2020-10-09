@@ -33,7 +33,7 @@ MEMORY=-Xms512m -Xmx3192m -XX:MaxMetaspaceSize=4g
 #JAVA_OPTIONS="-XX:+ScavengeBeforeFullGC -XX:+CMSScavengeBeforeRemark"
 
 # GC Logging
-GC_LOG=-XX:+PrintGCDateStamps -verbose:gc -XX:+PrintGCDetails -Xloggc:{{ oskari_log_dir }}/{{ oskari_component }}/gc.log
+GC_LOG=-verbose:gc -XX:+PrintGCDetails -Xloggc:{{ oskari_log_dir }}/{{ oskari_component }}/gc.log
 
 # Dump on Out of Memory
 OOM_LOG=-XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath={{ oskari_log_dir }}/{{ oskari_component }}/heap_`date`.hprof

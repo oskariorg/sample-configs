@@ -38,7 +38,7 @@ use_local_download: False
 assume_utils_installed: False
 
 # Use OpenJDK devel version since we need JSP compile
-java_cmd: /etc/alternatives/java_sdk_openjdk/bin/java
+java_cmd: /usr/lib/jvm/java-11-openjdk/bin/java
 
 # Jetty dirs
 jetty_home: "{{ oskari_dir }}/jetty-distribution-9.4.31.v20200723"
