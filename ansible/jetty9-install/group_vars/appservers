@@ -19,7 +19,7 @@ rocketchat_api_url: https://rocketchat.[your domain].fi/hooks/[your token]
 ###########################
 
 # False uses /etc/init.d scripts (RHEL/CentOS 6) and True uses systemctl services (RHEL/CentOS 7+)
-is_systemd: "{{ ansible_facts['distribution_major_version'] == 7 }}"
+is_systemd: "{{ ansible_facts['service_mgr'] == 'systemd' }}"
 
 # uncomment if proxy is required
 #server_proxy: myproxy.org
@@ -38,7 +38,7 @@ use_local_download: False
 assume_utils_installed: False
 
 # Use OpenJDK devel version since we need JSP compile
-java_cmd: /etc/alternatives/java_sdk_openjdk/bin/java
+java_cmd: /usr/lib/jvm/java-11-openjdk/bin/java
 
 # Jetty dirs
 jetty_home: "{{ oskari_dir }}/jetty-distribution-9.4.31.v20200723"

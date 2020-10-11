@@ -19,13 +19,12 @@
   with_items:
     - resources/articlesByTag
     - resources/oskari-ext.properties
-    - resources/log4j.properties
     - setup.war
     - sample-application
     - webapps/oskari-front.xml
     - webapps/oskari-map.xml
     - webapps/oskari-map.war
-    - webapps/READNE.TXT
+    - webapps/README.TXT
 
 # RHEL/Centos 6
 - include_tasks: setup-service-initd.yml
