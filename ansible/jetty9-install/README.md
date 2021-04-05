@@ -6,6 +6,6 @@ Doesn't install Redis/Postgres.
 2) Customize custom_vars/[server name].yml files (default properties are in group_vars/appservers)
 3) Run:
 `
-    ansible-playbook site.yml -i hosts_dev  --extra-vars "ansible_sudo_pass=yourPassword"
+    ansible-playbook site.yml -i hosts_dev --ask-become-pass
 `
     
