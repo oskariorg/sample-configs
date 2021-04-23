@@ -1,5 +1,5 @@
 <featureType>
-  <id>FeatureTypeInfoImpl--60b8b80c:1692a784258:-7fe0</id>
+  <id>FeatureTypeInfoImpl-208443ad:178fe432105:-7ffc</id>
   <name>categories</name>
   <nativeName>categories</nativeName>
   <namespace>
@@ -41,8 +41,8 @@
   <latLonBoundingBox>
     <minx>-180.00000000000003</minx>
     <maxx>180.00000000000003</maxx>
-    <miny>-85.05999999999999</miny>
-    <maxy>85.05999999999999</maxy>
+    <miny>-85.06</miny>
+    <maxy>85.06</maxy>
     <crs>EPSG:4326</crs>
   </latLonBoundingBox>
   <projectionPolicy>FORCE_DECLARED</projectionPolicy>
@@ -50,8 +50,11 @@
   <store class="dataStore">
     <id>DataStoreInfoImpl--60b8b80c:1692a784258:-7fe1</id>
   </store>
+  <serviceConfiguration>false</serviceConfiguration>
   <maxFeatures>0</maxFeatures>
   <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
   <overridingServiceSRS>false</overridingServiceSRS>
   <skipNumberMatched>false</skipNumberMatched>
   <circularArcPresent>false</circularArcPresent>

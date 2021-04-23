@@ -1,12 +1,13 @@
 <layer>
   <name>categories</name>
-  <id>LayerInfoImpl--60b8b80c:1692a784258:-7fdf</id>
+  <id>LayerInfoImpl-208443ad:178fe432105:-7ffb</id>
   <type>VECTOR</type>
   <resource class="featureType">
-    <id>FeatureTypeInfoImpl--60b8b80c:1692a784258:-7fe0</id>
+    <id>FeatureTypeInfoImpl-208443ad:178fe432105:-7ffc</id>
   </resource>
   <attribution>
     <logoWidth>0</logoWidth>
     <logoHeight>0</logoHeight>
   </attribution>
+  <dateCreated>2021-04-23 10:28:48.703 UTC</dateCreated>
 </layer>
