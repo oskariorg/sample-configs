@@ -1,5 +1,5 @@
 <GeoServerTileLayer>
-  <id>LayerInfoImpl--60b8b80c:1692a784258:-7fd7</id>
+  <id>LayerInfoImpl-208443ad:178fe432105:-7ff7</id>
   <enabled>true</enabled>
   <inMemoryCached>true</inMemoryCached>
   <name>oskari:vuser_layer_data</name>
@@ -9,10 +9,10 @@
   </mimeFormats>
   <gridSubsets>
     <gridSubset>
-      <gridSetName>EPSG:900913</gridSetName>
+      <gridSetName>EPSG:4326</gridSetName>
     </gridSubset>
     <gridSubset>
-      <gridSetName>EPSG:4326</gridSetName>
+      <gridSetName>EPSG:900913</gridSetName>
     </gridSubset>
   </gridSubsets>
   <metaWidthHeight>

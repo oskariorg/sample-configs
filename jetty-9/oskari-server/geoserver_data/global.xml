@@ -1,5 +1,6 @@
 <global>
   <settings>
+    <id>SettingsInfoImpl--6fc8a412:178fe3c950b:-8000</id>
     <contact>
       <id>contact</id>
     </contact>
@@ -8,6 +9,8 @@
     <verbose>true</verbose>
     <verboseExceptions>false</verboseExceptions>
     <localWorkspaceIncludesPrefix>false</localWorkspaceIncludesPrefix>
+    <showCreatedTimeColumnsInAdminList>false</showCreatedTimeColumnsInAdminList>
+    <showModifiedTimeColumnsInAdminList>false</showModifiedTimeColumnsInAdminList>
   </settings>
   <jai>
     <allowInterpolation>false</allowInterpolation>
@@ -133,7 +136,7 @@
     <queueType>UNBOUNDED</queueType>
     <imageIOCacheThreshold>10240</imageIOCacheThreshold>
   </coverageAccess>
-  <updateSequence>23</updateSequence>
+  <updateSequence>39</updateSequence>
   <featureTypeCacheSize>0</featureTypeCacheSize>
   <globalServices>true</globalServices>
   <xmlPostRequestLogBufferSize>1024</xmlPostRequestLogBufferSize>
