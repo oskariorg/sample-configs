@@ -6,13 +6,13 @@
   <Appenders>
     <RollingFile name="File"
         fileName="${LOG_DIR}/oskari.log"
-        filePattern="${LOG_DIR}/oskari-%i.log.gz">
+        filePattern="${LOG_DIR}/oskari-%i.log">
         <PatternLayout pattern="%d %-5p %c - %m%n" />
       <Policies>
         <OnStartupTriggeringPolicy />
         <SizeBasedTriggeringPolicy size="100MB" />
       </Policies>
-      <DefaultRolloverStrategy max="10" />
+      <DefaultRolloverStrategy max="50" />
     </RollingFile>
     <Console name="STDOUT">
         <PatternLayout pattern="%d %-5p %c - %m%n" />
