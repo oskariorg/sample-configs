@@ -41,7 +41,7 @@ assume_utils_installed: False
 java_cmd: /usr/lib/jvm/java-11-openjdk/bin/java
 
 # Jetty dirs
-jetty_home: "{{ oskari_dir }}/jetty-distribution-9.4.44.v20210927"
+jetty_home: "{{ oskari_dir }}/jetty-distribution-9.4.48.v20220622"
 oskari_log_dir: "{{ oskari_dir }}/log"
 oskari_tmp_dir: "{{ oskari_dir }}/tmp"
 geoserver_data_dir: "{{ oskari_dir }}/oskari-{% if use_single_jetty %}server{% else %}geoserver{% endif %}/geoserver_data"
