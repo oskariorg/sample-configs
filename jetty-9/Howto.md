@@ -4,9 +4,9 @@ This package was created with these steps
 
 ## Basic map functionality
 
-##### 1) Download Jetty as zip from https://www.eclipse.org/jetty/download.html (tested with 9.4.44)
+##### 1) Download Jetty as zip from https://www.eclipse.org/jetty/download.html (tested with 9.4.48)
 
-Unzip to a location on your computer. The location will be referenced as {JETTY_HOME} (The folder named 'jetty-distribution-9.4.44.v20210927').
+Unzip to a location on your computer. The location will be referenced as {JETTY_HOME} (The folder named 'jetty-distribution-9.4.48.v20220622').
 
 ##### 2) Cleanup the demo-content:
 
@@ -16,8 +16,8 @@ Unzip to a location on your computer. The location will be referenced as {JETTY_
 
 ##### 3) Adding the PostgreSQL driver
 
-- Download the driver .jar-file from https://jdbc.postgresql.org/download.html (tested with JDBC 4.2 Postgresql Driver, Version 42.3.1)
-- Place the driver in {JETTY_BASE}/lib/ext/postgresql-42.3.1.jar
+- Download the driver .jar-file from https://jdbc.postgresql.org/download.html (tested with JDBC 4.2 Postgresql Driver, Version 42.5.0)
+- Place the driver in {JETTY_BASE}/lib/ext/postgresql-42.5.0.jar
 
 ##### 4) Add configuration to serve Oskari application frontend files
 
@@ -51,7 +51,7 @@ Unzip to a location on your computer. The location will be referenced as {JETTY_
 
 ##### 7) Start the Jetty by running the command in {JETTY_BASE} (the oskari-server folder)
 
-	java -jar ../jetty-distribution-9.4.44.v20210927/start.jar
+	java -jar ../jetty-distribution-9.4.48.v20220622/start.jar
 	
 Note! you can also run the command from any folder (and port) with additional parameters, but some folder references like the GeoServer data dir needs to be updated to match this configuration:
 
@@ -59,7 +59,7 @@ Note! you can also run the command from any folder (and port) with additional pa
 	
 For debugging add parameters (remote debugging on port 5005):
 
-	java -Xdebug -agentlib:jdwp=transport=dt_socket,address=5005,server=y,suspend=n -jar ../jetty-distribution-9.4.44.v20210927/start.jar
+	java -Xdebug -agentlib:jdwp=transport=dt_socket,address=5005,server=y,suspend=n -jar ../jetty-distribution-9.4.48.v20220622/start.jar
 
 This creates the basic database structure (if it doesn't exist) with initial content based on a json file in content-resources modules resources. To create customized app you need to modify {JETTY_BASE}/resources/oskari-ext.properties by removing 'sample' from db.additional.modules and replace it with a flyway module name that will initialize the customized app.
 
