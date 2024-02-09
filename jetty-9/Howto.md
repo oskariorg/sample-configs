@@ -37,7 +37,7 @@ Unzip to a location on your computer. The location will be referenced as {JETTY_
 - run 'git clone https://github.com/oskariorg/oskari-server' on your computer to get the latest code for oskari-server
 - build the webapp by calling "mvn clean install" in the root of the oskari-server repository to compile webapp-map/target/oskari-map.war file and copy it to {JETTY_BASE}/webapps/oskari-map.war
 
-##### 7) Start the Jetty by running the command in {JETTY_BASE} (the oskari-server folder)
+##### 6) Start the Jetty by running the command in {JETTY_BASE} (the oskari-server folder)
 
 	java -jar ../jetty-distribution-9.4.51.v20230217/start.jar
 	
