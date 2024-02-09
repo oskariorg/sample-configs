@@ -1,5 +1,0 @@
-<rememberMeAuthentication>
-  <id>-60b8b80c:1692a784258:-7fec</id>
-  <name>rememberme</name>
-  <className>org.geoserver.security.filter.GeoServerRememberMeAuthenticationFilter</className>
-</rememberMeAuthentication>
