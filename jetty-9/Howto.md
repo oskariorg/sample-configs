@@ -37,23 +37,11 @@ Unzip to a location on your computer. The location will be referenced as {JETTY_
 - run 'git clone https://github.com/oskariorg/oskari-server' on your computer to get the latest code for oskari-server
 - build the webapp by calling "mvn clean install" in the root of the oskari-server repository to compile webapp-map/target/oskari-map.war file and copy it to {JETTY_BASE}/webapps/oskari-map.war
 
-##### 6) Setup Geoserver (optional)
-
-- Download GeoServer war-file and WPS-extension from http://geoserver.org/release/stable/
-- Unzip war-file to create geoserver folder under oskari-server/webapps
-- Remove data folder under oskari-server/webapps/geoserver
-- Include jar-files from WPS-extension on oskari-server/webapps/geoserver/WEB-INF/lib
-- Update oskari-server/webapps/README.txt
-- Update license files under license/geoserver
-- Compile additional modules for analyse functionality from https://github.com/oskariorg/oskari-server/tree/master/geoserver-ext/wps
-- Copy jar-file from IntersectionFeatureCollection2/target/ to oskari-server/webapps/geoserver/WEB-INF/lib
-- Copy jar-file from ZoneSectorFeatureCollection/target/ to oskari-server/webapps/geoserver/WEB-INF/lib
-
-##### 7) Start the Jetty by running the command in {JETTY_BASE} (the oskari-server folder)
+##### 6) Start the Jetty by running the command in {JETTY_BASE} (the oskari-server folder)
 
 	java -jar ../jetty-distribution-9.4.51.v20230217/start.jar
 	
-Note! you can also run the command from any folder (and port) with additional parameters, but some folder references like the GeoServer data dir needs to be updated to match this configuration:
+Note! you can also run the command from any folder (and port) with additional parameters, but some folder references need to be updated to match this configuration:
 
 	java -jar $JETTY_HOME/start.jar jetty.base=$JETTY_BASE jetty.http.port=8080
 	
