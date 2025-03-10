@@ -1,0 +1,1 @@
+Clone https://github.com/oskariorg/sample-application to this location
