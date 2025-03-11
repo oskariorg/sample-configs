@@ -11,6 +11,8 @@ The server expects the version to match on `oskari-server/lib/oskari-ext.propert
 oskari.client.version=dist/[frontend version folder]
 ```
 
+- Take a closer look at the `oskari-server/lib/oskari-ext.properties` for more configuration options like the database etc.
 - You can clone your own version of the frontend app and change the `docBase` in `oskari-server/conf/Catalina/localhost/Oskari.xml`
 - You can build your own version of the server to replace the war or change the `docBase` in `oskari-server/conf/Catalina/localhost/ROOT.xml`
-- Take a closer look at the `oskari-server/lib/oskari-ext.properties` for more configuration options like the database etc.
+- The template for creating your own frontend app to replace sample-application: https://github.com/oskariorg/sample-application
+- The template for creating your own server-side webapp to replace oskari-map.war: https://github.com/oskariorg/sample-server-extension
