@@ -44,12 +44,8 @@ ENV OSKARI_CONFIGS=/oskari-configs
 ##otherwise you need to build front sample-application first
 COPY --from=frontbuilder /oskari-front/dist $OSKARI_FRONT/dist
 #COPY ./sample-application/dist /oskari-front/dist/
-##comment out next line and uncomment line 55 if you want to build oskari-server manually
-#JETTY
-#Use docker to build
-#COPY --from=backendbuilder /oskari/webapp-map/target/oskari-map.war $JETTY_BASE/webapps/
-#Prebuilt
-#COPY  ./sample-server-extension/webapp-map/target/oskari-map.war $JETTY_BASE/webapps/
+##comment out and comment following lines for your preference --from... syntax will build on docker
+##manual build is faster but you need to have builded image ready on correct path
 #TOMCAT
 #Prebuilt
 #COPY  ./sample-server-extension/webapp-map/target/oskari-map.war $CATALINA_HOME/webapps/ROOT.war

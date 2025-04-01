@@ -1,5 +1,7 @@
-# Oskari development, contains docker setup for building oskari-server, 
-# oskari-frontend, database and sample apps for backend and frontend
+# Docker setup for Oskari development
+## Use at your own risk, not for production
+## contains docker setup for building oskari-server, 
+## oskari-frontend, database and sample apps for backend and frontend
 
 Application responds from url:
 http://localhost:8080/
