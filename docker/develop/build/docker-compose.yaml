@@ -1,0 +1,68 @@
+volumes:
+  postgres-data:
+  geoserver-data:
+networks:
+  frontend:
+  backend:
+services:
+  backendbuilder:
+    platform: linux/amd64
+    build:
+      context: ..
+      target: databaseq
+      dockerfile: Dockerfile
+
+  frontbuilder:
+    platform: linux/amd64
+    build:
+      context: ..
+      target: databaseq
+      dockerfile: Dockerfile
+
+  postgressql:
+    build:
+      context: ..
+      target: databaseq
+      dockerfile: Dockerfile
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/postgres-data:/var/lib/postgresql
+      - ./data/dbinitscripts/:/docker-entrypoint-initdb.d/
+#    env_file:
+#      - .env
+    environment:
+      - PASSWORD_AUTHENTICATION=md5
+      - POSTGRES_USER=oskari
+      - POSTGRES_PASS=oskari
+      - POSTGRES_PASSWORD=oskari
+      - POSTGRES_DBNAME=oskaridb
+    networks:
+      - backend
+    healthcheck:
+      #test: ["CMD-SHELL", "pg_isready"]
+      test: ["CMD", "./healthcheck.sh"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  tomcat:
+    build:
+      context: ..
+      target: tomcat
+      dockerfile: Dockerfile
+      args:
+        - OSKARI_DEV=false #true = use locally pulled version of oskari-server develop top, set version to same as oskari-server latest developt
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+      - "80:80"
+      - "5005:5005"
+    networks:
+      - backend
+    environment:
+      - DB_PASSWORD=oskari
+      - DB_USERNAME=oskari
+    depends_on:
+      postgressql:
+          condition: service_healthy
