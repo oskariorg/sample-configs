@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="error" strict="false" name="OskariLogConfig">
+  <Properties>
+    <Property name="LOG_DIR">/usr/local/tomcat/logs</Property>
+  </Properties>
+  <Appenders>
+    <RollingFile name="File"
+        fileName="${LOG_DIR}/oskari.log"
+        filePattern="${LOG_DIR}/oskari-%i.log">
+      	<PatternLayout pattern="%d %-5p %c - %m%n" />
+    	<Policies>
+    		<OnStartupTriggeringPolicy />
+    		<SizeBasedTriggeringPolicy size="100MB" />
+    	</Policies>
+    	<DefaultRolloverStrategy max="50" />
+    </RollingFile>
+    <Console name="STDOUT">
+      	<!--PatternLayout pattern="%d %-5p %c - %m%n" />
+        <ThresholdFilter level="warn"/-->
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Logger name="org.apache" level="warn">
+      <AppenderRef ref="File"/>
+    </Logger>
+    <Logger name="com.ibatis" level="warn">
+      <AppenderRef ref="File"/>
+    </Logger>
+    <Logger name="org.cometd" level="warn">
+      <AppenderRef ref="File"/>
+    </Logger>
+    <Logger name="org.quartz" level="warn">
+      <AppenderRef ref="File"/>
+    </Logger>
+      <Logger name="og4j.logger.org.springframework.core.env" level="debug">
+          <AppenderRef ref="File"/>
+          <AppenderRef ref="STDOUT" />
+      </Logger>
+    <Root level="debug">
+      <AppenderRef ref="File"/>
+      <AppenderRef ref="STDOUT" />
+    </Root>
+  </Loggers>
+</Configuration>

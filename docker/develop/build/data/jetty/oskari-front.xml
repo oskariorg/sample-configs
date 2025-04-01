@@ -1,0 +1,27 @@
+<?xml version="1.0"  encoding="ISO-8859-1"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.eclipse.org/configure.dtd">
+
+<!--
+Configure a custom context for serving static resources
+
+This context contains only a ResourceHandler
+to serve static html files and images.
+-->
+
+<Configure class="org.eclipse.jetty.server.handler.ContextHandler">
+  <Set name="contextPath">/Oskari</Set>
+  <Set name="resourceBase">/oskari-front</Set>
+  <Set name="handler">
+    <New class="org.eclipse.jetty.server.handler.ResourceHandler">
+      <Set name="welcomeFiles">
+        <Array type="String">
+          <Item>README.md</Item>
+        </Array>
+      </Set>
+      <!-- Uncomment to allow browser to cache files -->
+      <!-- Set name="cacheControl">max-age=3600,public</Set -->
+    </New>
+  </Set>
+
+</Configure>
+

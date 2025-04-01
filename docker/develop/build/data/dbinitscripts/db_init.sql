@@ -1,0 +1,8 @@
+CREATE DATABASE oskaridb
+ WITH OWNER = postgres
+   ENCODING = 'UTF8'
+   TABLESPACE = pg_default
+   CONNECTION LIMIT = -1;
+
+CREATE USER oskari WITH PASSWORD 'oskari';
+GRANT ALL PRIVILEGES ON DATABASE oskaridb to oskari;

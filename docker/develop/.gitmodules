@@ -1,0 +1,12 @@
+[submodule "oskari-frontend"]
+	path = oskari-frontend
+	url = https://github.com/oskariorg/oskari-frontend
+[submodule "oskari-server"]
+	path = oskari-server
+	url = https://github.com/oskariorg/oskari-server
+[submodule "sample-application"]
+	path = sample-application
+	url = https://github.com/oskariorg/sample-application
+[submodule "sample-server-extension"]
+	path = sample-server-extension
+	url = https://github.com/oskariorg/sample-server-extension

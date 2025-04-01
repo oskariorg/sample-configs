@@ -1,0 +1,242 @@
+<p>
+This Oskari sample application has many functions and tools to view and visualize maps, build new map views composed of multiple geographic datasets and map layers, import your own datasets, search locations, embed maps on your website and share a link to maps, build and publish thematic maps and add interactively your own data on top of map layers.</p>	
+<p>
+There is also a short guided tour available in the sample application. The guided tour contains demonstration username and password for both regular user and administrator.</p>
+<p>Main functions and tools are described below. </p>
+
+<p>
+	<strong><a name="table-of-content"></a>Table of Contents:</strong><br />
+   - <a href="#how-to-use-the-map-window">How to Use the Map Window</a><br />
+   - <a href="#basic-concepts-of-oskari-sample-application">Basic Concepts of Oskari Sample Application</a><br />
+   - <a href="#map-views-and-layers">Map Views and Layers</a><br />
+   - <a href="#basic-map-window-functions">Basic Map Window Functions</a><br />
+   - <a href="#oskari-menu">Oskari Menu</a><br />
+   - <a href="#tools">Tools</a>
+</p>
+<p>  &nbsp;</p>
+<h3>
+	<a name="how-to-use-the-map-window"></a>How to Use the Map Window</h3>
+
+<p> When you open the Oskari sample application, the map window opens  . It contains a world map in Web Mercator projection (EPSG:3857) as a default map view. </p>
+con
+<p> On the left in the map window there is the Oskari menu. On the right there are tools. Tools on the right are from top down panning controls, coordinates and map orientation rectifier.</p>
+
+<p> You can always reset the map window to this default view by clicking the center of the panning controls round symbol on top right corner of the map window. The same function is also available in the tools menu. Click the same symbol as in the center of panning controls, which has a curved arrow pointing to the left wall. 
+</p>
+
+<p> 	&nbsp;</p> 
+
+<h3>
+	<a name="basic-concepts-of-oskari-sample-application"></a>Basic Concepts of Oskari Sample Application</h3>
+
+<p>  Oskari user works with map layers, map views and user’s own datasets to create map views  . Map views, layers and datasets may be saved, published and shared.  Many of the functions in Oskari require login as a user. </p>
+
+<p> 	&nbsp;</p> 
+
+<h3>	
+	<a name="map-views-and-layers"></a>How to Use the Map Window</h3>
+	
+<p>
+	<strong>Move the map</strong> by clicking and dragging it or by clicking the panning controls in the top right corner. When you are looking for a specific object or location, use the Search function.</p>
+<p>
+Map view is what you see on the map window along with any tools and controls. Named map views are created by saving the current map view on the screen. You can save thematic map as map view. This will also preserve the underlying map layer of a given thematic map.</p>
+
+<p> Map views are created from map layers stacked in certain order. You manipulate this stack and both the attributes and styles of the map layers.  The central tool to arrange stack is MAP LAYERS | Selected layers tab. This tool also defines the current stack of layers creating the current map view. Any operations in Oskari adding or deleting layers usually changes content of Selected layers tab and consequently the current map view. </p>
+
+<p>  Map layers are the basic building blocks for map views. There are multiple ways to create or obtain map layers. Importing your data creates a map layer, creating a point, a line or an area allows you to create a new map layer for them or insert them into an existing layer. Creating a thematic map creates also a map layer or layers. There is New map layer function in MY DATA | Places to create new map layer.
+Your Oskari may be also configured to receive map layers from service providers for use within Oskari. </p>
+
+<p>Once you complete your work on layers and achieve a view you wanted, you can publish your results either as an embedded map or share a link to named map view.
+</p>
+
+<p> 	&nbsp;</p>
+<h3>
+	<a name="basic-map-window-functions"></a>Basic Map Window Functions</h3>
+<p>
+You can move the map by clicking and anywhere on the map and dragging or by clicking the panning control arrows in the top right corner. </p>
+
+<p>The scale selector to zoom in and out is located below panning controls on the right.  You can zoom in on the map by clicking the + control above scale selector or zoom out by clicking the - control under the scale selector. Alternatively click and drag the round switch on scale selector directly to the desired scale level. </p>
+
+<p> You can see the location of the mouse pointer on the map by clicking the XY coordinates tool below scale. You can also pan map to specific coordinates and add markers with this tool. </p>
+
+<p> Reset map north to back upwards by clicking the map orientation rectifier. Use Alt+Shift+Drag to rotate the map in the window.</p>
+
+<p>
+	<strong>The Map legend</strong> menu contains a description of the symbols used on the map layers.</p>
+<p>
+	<strong>The User guide</strong> menu contains this user guide. If you need more help, the i-symbol or more information link contain additional information.<br />
+	Please note, that you can always reset the default settings and undo or redo any changes. These tools are located in the left margin below the menus (see Tools).</p>
+<p>
+	&nbsp;</p>
+
+<h3>
+   <a name="oskari-menu"></a>Oskari Menu</h3>
+<p>
+	- <a href="#search">Search</a><br />
+	- <a href="#map-layers">Map Layers</a><br />
+	- <a href="#my-data">My Data</a><br />
+	- <a href="#map-publishing">Map Publishing</a><br />
+	- <a href="#map-legend">Map Legend</a><br />
+	- <a href="#user-guide">User Guide</a><br />
+        - <a href="#thematic-maps">Thematic Maps</a>
+</p>
+<p> 	&nbsp;</p>
+<h3>
+  <a name="search"></a>Search</h3>
+   
+<p>
+You can locate a place on the map either by name or by address. You can also center the map on location found. 
+Enter the search text and click on the result. The map window will be focused immediately on the selected location.</p> 
+   
+<p> Metadata Search, if available, makes a search on the available metainformation from the map information service providers connected to Oskari. By default, there are no service providers connected to Oskari. Hence the Metadata search will not be available.
+</p> 
+ 
+<p> 	&nbsp;</p>
+<h3>
+  <a name="map-layers"></a>Map Layers</h3>
+
+<p> There are two (2) tabs available in this tool. They are Search layers tab and Selected layers tab. </p> 
+
+<h4>Search layers tab</h4>
+
+<p> All the map layers available for use by default in current Oskari configuration are there In this tab.</p> 
+
+<p> The available map layers and datasets are listed below the text search box.</p> 
+ 
+<p> You can organize the map layers list either by data providers or by theme. You can select which by clicking the leftmost dropdown menu above the text search box. </p> 
+
+<p> Alternatively, you can list the newest map layers, publishable layers, time series, vector layers and 3D layers by selecting the corresponding choice from the Show drop-down menu on the right.</p> 
+
+<p> You can search map layers by a map layer name, a data provider name or a keyword by writing text to the search box.
+All selected layers will show up in Selected layers tab and will update the map window.</p> 
+
+
+<h4>Selected layers tab</h4>
+
+<p> The Selected layers tab shows which datasets and map layers are currently displayed in the map view and in the map window.</p> 
+
+<p> You can control what map layers are currently visible in the map window by changing content in the Selected layers tab. </p> 
+
+<p> You can change the mutual order of the layers by dragging layers up and down, change the layer opacity, visibility and the styling of a layer if these changes are available for the given layer. Changes are reflected immediately in the map window.</p>
+
+<p> The number on the right side of the Selected layers - text shows the number of selected map layers in the current map view in the map window.</p> 
+
+<p>
+  The contents of this tool, the list of layers, will change every time you make any change that will affect the map window.
+</p>
+
+<p> 	&nbsp;</p>
+<h3> <a name="my-data"></a>My Data</h3>
+
+<p> You can manage with this tool items in Places, My Map Views, Embedded Maps, My Account and Datasets.</p> 
+
+<h4>Places </h4>
+
+<p> You can create a new map layer in the Places tab by clicking New map layer. Current map view in the map window is included in the layer.  You can also delete your layer here.</p> 
+
+<p> One map layer has a special built-in name My map layer. Case is important. This My map layer can contain multiple map layers. These layers may include e.g. drawn points, lines, areas and markers you have created using the tools from the menu. 
+You can also manage your various map layers you have created in this tab.</p> 
+
+
+<h4>My Map Views</h4>
+
+<p> You can save and manage your map views in this tab. There is a list of saved map views here. 
+You can select any map view in the list by clicking the name. The map window will be focused on the selected map view immediately. This will also change the selection in the Selected layers tab in MY LAYERS.</p> 
+
+<h4>Embedded Maps</h4>
+
+<p> You can view, manage and control embedded maps you have published in this tab. Embedded maps are created in MAP PUBLISHING.</p> 
+
+<h4>My Account</h4>
+
+<p> You can view your name, password and email address. You cannot change them.</p> 
+
+<h4>Datasets</h4>
+
+<p> You can manage your own datasets in this tab. You can add your own dataset visible in this tab into the Selected layers tab as a new layer by clicking the dataset name here.</p> 
+
+<p> Datasets are imported by using Import datasets -tool further down in menu. </p> 
+
+<p> 	&nbsp;</p>
+<h3>
+  <a name="map-publishing"></a>Map Publishing</h3>
+  
+<p> You can publish an embedded map by clicking this menu. In the tool you will select map layers you want to publish from those available in Selected layers.</p> 
+
+<p> In the end of the process you also receive the short html-code to insert into a website. Later you can access this embedded map and retrieve the html-code again via MY DATA | Embedded Maps. </p> 
+
+<p> 	&nbsp;</p>
+<h3>
+  <a name="map-legend"></a>Map Legend</h3>
+
+<p> The Map legend menu contains a description of the symbols used on the map in the map windowrs if legend information is available.</p> 
+
+<p> 	&nbsp;</p>
+<h3>
+  <a name="user-guide"></a>User Guide </h3>
+
+<p> The User guide menu contains this user guide. If you need more help, the i-symbol on dialogs provides additional information in addition to the guided tour.</p>  
+
+<p> 	&nbsp;</p>
+<h3>
+  <a name="thematic-maps"></a>Thematic</h3>
+
+<p> You can create thematic maps with this tool. You can select the dataset,map layers and indicators to be used with this tool. 
+Data can be viewed in tabular form or as a bar chart as well. 
+  Save the results as a map view using MY DATA | My Map Views | Save current view. You can also publish the result as an embedded map. The published map may also include additional functions such as tool to change the classification and appearance of the map and to display the data from the map in tabular or in chart form.
+</p> 
+
+<p><a href="#table-of-content">Go to table of contents</a></p>
+
+
+
+<p> 	&nbsp;</p>
+<h3>
+  <a name="tools"></a>Tools</h3>
+
+<p>In the menu there are tools after the thematic map menu choice. </p>
+
+<p>First row of tools changes the map view in the map window. The tools are:</p>
+
+<ol>
+<li> Reset map view (same as in the center of panning tool in top right corner of the map window)</li>
+<li> Move to previous map view and move to </li>
+<li> Move to next map view and move to </li>
+</ol>
+<p>These tools change the contents of the <b>Selected layers tab</b> in the <em>Map Layers</em>.</p>
+
+<p>The tools in the second row are:</p>
+<ol start="4">
+<li> Zoom in the map view        - draw a rectangle on the map and map window will zoom in on that area</li>
+<li> Pan the map by dragging     - click and drag to pan the map</li>
+<li> Measure a line on the map   - draw a line on the map and tool will measure the length</li>
+<li> Measure an area on the map   - draw a polygon on the map and tool will measure the area</li>
+</ol>
+
+<p>The tools in the third row are:</p>
+<ol start="8">
+<li> Camera symbol   -- save map view. The result will be saved in My Map Views under MY DATA. This requires login</li>
+<li> Link symbol   -- create a link to current map view. This link can be copied to be used elsewhere</li>
+<li> Map marker tool on the fourth row is the only one. You add markers to the current map view with the tool.</li>
+</ol>
+
+<p>The tools in the fifth row require login and they are:</p>
+
+<ol start="12">
+<li> Draw point -- you draw a point or points on the current map view to define a feature and points are saved in the Places tab under My Data. </li>
+<li> Draw line -- similarly you draw line or area (polygon) on the current map view using line and area tools. Results are saved in the Places tab under My Data. </li>
+<li> Draw area</li>
+<li> Import dataset -- you import your dataset as a map layer in any of the formats supported by import-tool.  Results are saved in the Datasets tab under My Data. </li>
+<li> 3D tool is the last tool on the sixth row. This changes into a 3D map view. Limited map levels and tools are available.</li>
+</ol>
+
+  <p>
+<p>There are four (4) items left after the 3D tool. </p>
+<p>Three of them are there for user to login.  When the user has not signed in yet, there is a username and password fields and login-button. </p>
+<p>After signing in there will be logout-link and account-link. Logout-link works as usual.  Account-line will open MY DATA with account information tab selected.</p>
+
+<p>Last item on the left column after login and account links is a link EPSG:3067. This changes into a map of Finland only with said map projection of EPSG:3067.
+</p>
+
+
+<p><a href="#table-of-content">Go to table of contents</a></p>
