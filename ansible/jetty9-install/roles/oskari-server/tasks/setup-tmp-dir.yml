@@ -1,9 +1,0 @@
-# Assumes to get "oskari_component" as parameter
-- name: Creates tmp directory for {{ oskari_component }}
-  file:
-    path: "{{ oskari_tmp_dir }}/{{ oskari_component }}"
-    state: directory
-    owner: jetty
-    group: oskari
-    mode: 0775
-    recurse: yes

@@ -1,9 +1,0 @@
----
-- name: add group "oskari"
-  group: name=oskari
-
-- name: add user "oskari"
-  user: name=oskari group=oskari
-
-- name: add user "jetty"
-  user: name=jetty group=oskari
