@@ -17,7 +17,7 @@ then
 fi
 
 export JAVA_OPTS="$DEBUG_ARGS -Djava.io.tmpdir=$CATALINA_BASE/temp/ -Djava.awt.headless=true $PROXY_OPTS"
-export CATALINA_HOME="$(dirname $PWD)/apache-tomcat-10.1.39"
+export CATALINA_HOME="$(dirname $PWD)/apache-tomcat-10.1.46"
 
 # Handle debug -> start as command part /debug only adds cli-params and uses start
 CMD_STUFF="$1"
