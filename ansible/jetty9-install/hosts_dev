@@ -1,8 +1,0 @@
-[appservers]
-mydevserver
-
-[dbservers]
-mydevserver
-
-[appservers:vars]
-service_fqdn=http://dev.mysite.org
