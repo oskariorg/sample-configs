@@ -1,6 +1,8 @@
 # Sample configurations
 
-Contains sample configurations for Oskari-related software
+Contains sample configurations for Oskari-related software.
+
+The RPC workshops that were previously here have been moved to https://github.com/oskariorg/oskari-documentation-site/public/workshops/
 
 # Reporting issues
 
