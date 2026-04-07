@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="error" strict="false" name="OskariLogConfig">
+<Properties>
+    <Property name="LOG_DIR">logs</Property>
+</Properties>
+<Appenders>
+    <File name="APPLOG"
+        fileName="${LOG_DIR}/oskari.log">
+        <PatternLayout pattern="%d [%t] %-5p %c - %m{nolookups}%n" />
+    </File>
+</Appenders>
+<Loggers>
+    <!-- migrations -->
+    <Logger name="org.flywaydb" level="warn" />
+    <!-- db/mybatis -->
+    <Logger name="com.ibatis" level="warn" />
+    <!-- connection pool -->
+    <Logger name="com.zaxxer.hikari" level="warn" />
+    <!-- scheduler -->
+    <Logger name="org.quartz" level="warn" />
+    <!-- commons? -->
+    <Logger name="org.apache" level="warn" />
+    <!-- oskari -->
+    <Logger name="fi.mml" level="info" />
+    <Logger name="fi.nls" level="info" />
+    <Logger name="org.oskari" level="info" />
+    <!-- spring -->
+    <!-- Logger name="org.springframework" level="warn" />
+    <Logger name="fi.nls.oskari.spring" level="warn" />
+    <Logger name="org.oskari.spring" level="warn" />
+    <Logger name="org.springframework.context.annotation.ClassPathBeanDefinitionScanner" level="warn" / -->
+
+    <Root level="info">
+        <AppenderRef ref="APPLOG" />
+    </Root>
+</Loggers>
+</Configuration>
