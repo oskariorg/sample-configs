@@ -71,7 +71,7 @@
                connectionTimeout="20000"
                redirectPort="8080"
                maxParameterCount="1000"
-               relaxedQueryChars="|"
+               relaxedQueryChars="|{}"
                scheme="https" secure="true"
                parseBodyMethods="POST,PUT" 
                />
